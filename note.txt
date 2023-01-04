@@ -1,0 +1,1 @@
+docker run -d -p 5000:5000 --name pesos_api -v $(pwd)/student-list/simple_api/student_age.json:/data/student_age.json api

@@ -15,7 +15,6 @@ services:
     networks:
       - pesos_network
   api:
-    build: .
     image: api
     volumes:
       - ./student-list/simple_api/student_age.json:/data/student_age.json
