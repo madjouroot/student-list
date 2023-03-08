@@ -1,7 +1,9 @@
 FROM python:2.7-stretch
 WORKDIR /app
+RUN pwd
 RUN ls
 COPY . /app
+RUN pwd
 RUN ls
 #ADD ./student-list/simple_api/* /
 RUN apt-get update -y &&\
@@ -9,6 +11,7 @@ RUN apt-get update -y &&\
     pip install flask==1.1.2 flask_httpauth==4.1.0 flask_simpleldap python-dotenv==0.14.0
 RUN ls
 COPY . .
+RUN pwd
 RUN ls
 VOLUME ["/data"]
 EXPOSE 5000
